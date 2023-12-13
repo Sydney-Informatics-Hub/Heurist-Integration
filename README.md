@@ -18,3 +18,8 @@ by separate software components which can be maintained and updated more easily
 than a single complex system. Tooling and standards developed as part of this
 project will be made available as part of the HASS and Indigenous Research
 Commons and the Community Data Lab.
+
+## Documentation
+
+* [Heurist Sustainability - RO-Crate Architecture](docs/USYD_Heurist_Sustainabilitu_RO-Crate_Architecture.docx)
+* [Wireframes from Oni UX enhancements](wireframes/)
