@@ -23,3 +23,8 @@ Commons and the Community Data Lab.
 
 * [Heurist Sustainability - RO-Crate Architecture](docs/USYD_Heurist_Sustainabilitu_RO-Crate_Architecture.docx)
 * [Wireframes from Oni UX enhancements](wireframes/)
+
+## Outputs
+
+* [Opening the Multilingual Archive of Australia](ro-crates/OMAA/ro-crate-metadata.json)
+* [RO-Crate Mapping for OMAA](ro-crates/mapping/ro-crate-metadata.json)

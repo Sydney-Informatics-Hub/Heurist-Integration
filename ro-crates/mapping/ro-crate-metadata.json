@@ -1,0 +1,668 @@
+{
+    "@context": [
+        "https://w3id.org/ro/crate/1.1/context",
+        {
+            "_RecordType": "https://w3id.org/ro/terms/heurist-mapping#_RecordType",
+            "_Vocabulary": "https://w3id.org/ro/terms/heurist-mapping#_Vocabulary",
+            "_BaseField": "https://w3id.org/ro/terms/heurist-mapping#_BaseField",
+            "_Field": "https://w3id.org/ro/terms/heurist-mapping#_Field",
+            "_VocabularyTermLabel": "https://w3id.org/ro/terms/heurist-mapping#_VocabularyTermLabel",
+            "_VocabularyTermDescription": "https://w3id.org/ro/terms/heurist-mapping#_VocabularyTermDescription",
+            "_VocabularyTermCode": "https://w3id.org/ro/terms/heurist-mapping#_VocabularyTermCode",
+            "_Function": "https://w3id.org/ro/terms/heurist-mapping#_Function",
+
+            "_name": "https://w3id.org/ro/terms/heurist-mapping#_name",
+            "_sourceType": "https://w3id.org/ro/terms/heurist-mapping#_sourceType",
+            "_valueFunction": "https://w3id.org/ro/terms/heurist-mapping#_valueFunction",
+            "_sourceIdentifier": "https://w3id.org/ro/terms/heurist-mapping#_sourceIdentifier"
+        },
+        {
+            "translatedTitle": "https://w3id.org/ro/terms/omaa#translatedTitle",
+            "file": "https://w3id.org/ro/terms/omaa#file"
+        }
+    ],
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.json",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            },
+            "about": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "name": "Data mapping of Heurist to RO-Crate",
+            "description": "Provides the mapping structure from Heurist to RO-Crate",
+            "hasPart": [
+                {"@id": "#record_file"},
+                {"@id": "#record_omaa_image"},
+                {"@id": "#record_newspaper"},
+                {"@id": "#record_text"},
+                {"@id": "#rcord_text_collection"},
+                {"@id": "#record_person"},
+                {"@id": "#record_place"},
+                {"@id": "#vocabulary_term_omaa_country"},
+                {"@id": "#vocabulary_term_omaa_language"},
+                {"@id": "#vocabulary_term_language"}
+            ]
+        },
+
+
+        {
+            "@id": "#record_file",
+            "@type": "CreativeWork",
+            "_sourceType": {"@id": "#record_type_file"},
+            "name": "File Record",
+            "_name": {"@id": "#base_field_name_or_title"},
+            "encoding": {"@id": "#base_field_file_uploaded"},
+            "license": {"@id": "#base_field_rights"}
+        },
+        {
+            "@id": "#record_omaa_image",
+            "@type": "CreativeWork",
+            "_sourceType": {"@id": "#record_type_omaa_image"},
+            "name": "OMAA Image record",
+            "_name": {"@id": "#base_field_name_or_title"},
+            "author": {"@id": "#base_field_author"},
+            "spatialCoverage": {"@id": "#base_field_place"},
+            "publisher": {"@id": "#base_field_omaa_publisher"},
+            "keywords": {"@id": "#base_field_keywords"},
+            "creator": {"@id": "#base_field_creator"},
+            "temporalCoverage": {"@id": "#base_field_period_of_reference"},
+            "dateCreated": {"@id": "#base_field_date"},
+            "url": {"@id": "#base_field_link"},
+            "conditionsOfAccess": {"@id": "#base_field_access_rights"},
+            "license": {"@id": "#base_field_rights"},
+            "countryOfOrigin": {"@id": "#base_field_country_of_origin"},
+            "inLanguage": {"@id": "#base_field_language"},
+            "abstract": {"@id": "#base_field_abstract"},
+            "text": {"@id": "#base_field_transcription"},
+            "citation": {"@id": "#base_field_bibliographic_citation"},
+            "file": {"@id": "#base_field_file"}
+        },
+        {
+            "@id": "#record_newspaper",
+            "@type": "Newspaper",
+            "_sourceType": {"@id": "#record_type_omaa_newspaper"},
+            "name": "Newspaper Record",
+            "_name": {"@id": "#base_field_name_or_title"},
+            "translatedTitle": {"@id": "#base_field_translated_title"},
+            "publisher": {"@id": "#base_field_omaa_publisher"},
+            "temporalCoverage": {"@id": "#base_field_period_of_reference"},
+            "dateCreated": {"@id": "#base_field_date"},
+            "url": {"@id": "#base_field_link"},
+            "conditionsOfAccess": {"@id": "#base_field_access_rights"},
+            "license": {"@id": "#base_field_rights"},
+            "countryOfOrigin": {"@id": "#base_field_country_of_origin"},
+            "spatialCoverage": {"@id": "#base_field_place"},
+            "inLanguage": {"@id": "#base_field_language"},
+            "abstract": {"@id": "#base_field_abstract"},
+            "text": {"@id": "#base_field_transcription"},
+            "citation": {"@id": "#base_field_bibliographic_citation"},
+            "file": {"@id": "#base_field_file"}
+        },
+        {
+            "@id": "#record_text",
+            "@type": "CreativeWork",
+            "_sourceType": {"@id": "#record_type_text"},
+            "name": "Text Record",
+            "_name": {"@id": "#base_field_name_or_title"},
+            "author": {"@id": "#base_field_author"},
+            "publisher": {"@id": "#base_field_omaa_publisher"},
+            "keywords": {"@id": "#base_field_keywords"},
+            "creator": {"@id": "#base_field_creator"},
+            "temporalCoverage": {"@id": "#base_field_period_of_reference"},
+            "dateCreated": {"@id": "#base_field_date"},
+            "url": {"@id": "#base_field_link"},
+            "conditionsOfAccess": {"@id": "#base_field_access_rights"},
+            "license": {"@id": "#base_field_rights"},
+            "countryOfOrigin": {"@id": "#base_field_country_of_origin"},
+            "spatialCoverage": {"@id": "#base_field_place"},
+            "inLanguage": {"@id": "#base_field_language"},
+            "abstract": {"@id": "#base_field_abstract"},
+            "text": {"@id": "#base_field_transcription"},
+            "citation": {"@id": "#base_field_bibliographic_citation"},
+            "file": {"@id": "#base_field_file"},
+            "image": {"@id": "#base_field_image"}
+        },
+        {
+            "@id": "#rcord_text_collection",
+            "@type": "Collection",
+            "_sourceType": {"@id": "#record_type_text_collection"},
+            "name": "Text collection record",
+            "_name": {"@id": "#base_field_name_or_title"},
+            "inLanguage": {"@id": "#base_field_language"},
+            "image": {"@id": "#base_field_image"},
+            "url": {"@id": "#base_field_link"},
+            "conditionsOfAccess": {"@id": "#base_field_access_rights"},
+            "license": {"@id": "#base_field_rights"},
+            "dateCreated": {"@id": "#base_field_date"},
+            "keywords": {"@id": "#base_field_keywords"},
+            "description": {"@id": "#base_field_description"}
+        },
+        {
+            "@id": "#record_person",
+            "@type": "Person",
+            "_sourceType": {"@id": "#record_type_person"},
+            "name": "Person record",
+            "familyName": {"@id": "#base_field_name_or_title"},
+            "givenName": {"@id": "#base_field_given_names"},
+            "alternateName": {"@id": "#base_field_alternate_name"},
+            "gender": {"@id": "#base_field_gender"},
+            "description": {"@id": "#base_field_short_summary"},
+            "image": {"@id": "#base_field_primary_image"},
+            "honorificPrefix": {"@id": "#base_field_honorific"},
+            "birthDate": {"@id": "#base_field_start_date"},
+            "birthPlace": {"@id": "#base_field_location"},
+            "relatedTo": {"@id": "#base_field_related_person"},
+            "deathDate": {"@id": "#base_field_end_date"},
+            "deathPlace": {"@id": "#base_field_place_of_death"},
+            "contactPoint": {"@id": "#base_field_contact_details"},
+            "email": {"@id": "#base_field_email_address"},
+            "knowsLanguage": {"@id": "#base_field_language_spoken"},
+            "url": {"@id": "#base_field_url"}
+        },
+        {
+            "@id": "#record_place",
+            "@type": "Place",
+            "_sourceType": {"@id": "#record_type_place"},
+            "name": "Place Record",
+            "_name": {"@id": "#base_field_name_or_title"},
+            "geo": {"@id": "#base_field_mappable_location"},
+            "image": {"@id": "#base_field_primary_image"},
+            "description": {"@id": "#base_field_short_summary"},
+            "alternateName": {"@id": "#base_field_alternate_name"}
+        },
+        
+
+        {
+            "@id": "#vocabulary_term_omaa_country",
+            "@type": "Country",
+            "_sourceType": {"@id": "#vocabulary_omaa_country"},
+            "name": "OMAA Country Terms",
+            "_name": {"@id": "#vocabulary_term_label"},
+            "description": {"@id": "#vocabulary_term_description"},
+            "alternateName": {"@id": "#vocabulary_term_code"}
+        },
+        {
+            "@id": "#vocabulary_term_omaa_language",
+            "@type": "Language",
+            "_sourceType": {"@id": "#vocabulary_omaa_language"},
+            "name": "OMAA Language Terms",
+            "_name": {"@id": "#vocabulary_term_label"},
+            "description": {"@id": "#vocabulary_term_description"},
+            "alternateName": {"@id": "#vocabulary_term_code"}
+        },
+        {
+            "@id": "#vocabulary_term_language",
+            "@type": "Language",
+            "_sourceType": {"@id": "#vocabulary_language"},
+            "name": "Language Terms",
+            "_name": {"@id": "#vocabulary_term_label"},
+            "description": {"@id": "#vocabulary_term_description"},
+            "alternateName": {"@id": "#vocabulary_term_code"}
+        },
+
+
+        {
+            "@id": "#record_type_file",
+            "@type": "_RecordType",
+            "name": "File",
+            "description": "OAMA file",
+            "_sourceIdentifier": "102"
+        },
+        {
+            "@id": "#record_type_omaa_image",
+            "@type": "_RecordType",
+            "name": "OMAA Image",
+            "description": "OAMA images",
+            "_sourceIdentifier": "108"
+        },
+        {
+            "@id": "#record_type_omaa_newspaper",
+            "@type": "_RecordType",
+            "name": "OMAA Newspaper",
+            "description": "OAMA newspaper",
+            "_sourceIdentifier": "107"
+        },
+        {
+            "@id": "#record_type_text",
+            "@type": "_RecordType",
+            "name": "Text",
+            "description": "OAMA texts",
+            "_sourceIdentifier": "101"
+        },
+        {
+            "@id": "#record_type_text_collection",
+            "@type": "_RecordType",
+            "name": "Text Collection",
+            "description": "A collection of texts suitable for teaching or a particular project",
+            "_sourceIdentifier": "103"
+        },
+        {
+            "@id": "#record_type_person",
+            "@type": "_RecordType",
+            "name": "Person",
+            "description": "A record for a Person, for routine use eg. for authors, painters, historical figures.",
+            "_sourceIdentifier": "10"
+        },
+        {
+            "@id": "#record_type_place",
+            "@type": "_RecordType",
+            "name": "Place",
+            "description": "A simplified record for a Place, for routine use eg. for site location, place of birth, place of publication. Use Place (detailed) where more information is needed.",
+            "_sourceIdentifier": "12"
+        },
+        
+
+        {
+            "@id": "#vocabulary_omaa_country",
+            "@type": "_Vocabulary",
+            "name": "OMAA Country",
+            "description": "",
+            "_sourceIdentifier": "9475"
+        },
+        {
+            "@id": "#vocabulary_omaa_language",
+            "@type": "_Vocabulary",
+            "name": "OMAA Language",
+            "description": "",
+            "_sourceIdentifier": "9476"
+        },
+        {
+            "@id": "#vocabulary_language",
+            "@type": "_Vocabulary",
+            "name": "Language",
+            "description": "Common languages vocabulary",
+            "_sourceIdentifier": "496"
+        },
+
+        {
+            "@id": "#base_field_name_or_title",
+            "@type": "_BaseField",
+            "name": "Name or Title",
+            "description": "The main name or title for the object",
+            "_sourceIdentifier": "1"
+        },
+        {
+            "@id": "#base_field_author",
+            "@type": "_BaseField",
+            "name": "Author",
+            "description": "Entities responsible for making contributions to the resource.",
+            "_sourceIdentifier": "1092"
+        },
+        {
+            "@id": "#base_field_omaa_publisher",
+            "@type": "_BaseField",
+            "name": "OMAA Publisher",
+            "description": "An entity responsible for making the resource available.",
+            "_sourceIdentifier": "1093"
+        },
+        {
+            "@id": "#base_field_keywords",
+            "@type": "_BaseField",
+            "name": "Keywords",
+            "description": "Resource topics, entered as free text (I.e. can be anything). Purpose is to enhance searchability.",
+            "_sourceIdentifier": "1094"
+        },
+        {
+            "@id": "#base_field_creator",
+            "@type": "_BaseField",
+            "name": "Creator",
+            "description": "An entity responsible for making the resource. This field is used if there is a creator that is different from the author.",
+            "_sourceIdentifier": "1095"
+        },
+        {
+            "@id": "#base_field_period_of_reference",
+            "@type": "_BaseField",
+            "name": "Period of reference",
+            "description": "Temporal characteristics of the resource.",
+            "_sourceIdentifier": "1105"
+        },
+        {
+            "@id": "#base_field_date",
+            "@type": "_BaseField",
+            "name": "Date",
+            "description": "The single or principal date of the item (may also include time and/or have fuzzy limits)",
+            "_sourceIdentifier": "9"
+        },
+        {
+            "@id": "#base_field_link",
+            "@type": "_BaseField",
+            "name": "Link",
+            "description": "The URL from which the resource is derived.",
+            "_sourceIdentifier": "1097"
+        },
+        {
+            "@id": "#base_field_access_rights",
+            "@type": "_BaseField",
+            "name": "Access Rights",
+            "description": "Information about who can access the resource or an indication of its security status.",
+            "_sourceIdentifier": "1101",
+            "_valueFunction": {"@id": "#function_to_text"}
+        },
+        {
+            "@id": "#base_field_rights",
+            "@type": "_BaseField",
+            "name": "Rights",
+            "description": "Information about rights held in and over the resource",
+            "_sourceIdentifier": "1102"
+        },
+        {
+            "@id": "#base_field_country_of_origin",
+            "@type": "_BaseField",
+            "name": "Country of origin",
+            "description": "Spatial characteristics of the resource.",
+            "_sourceIdentifier": "1103"
+        },
+        {
+            "@id": "#base_field_language",
+            "@type": "_BaseField",
+            "name": "Language",
+            "description": "Languages of the resource.",
+            "_sourceIdentifier": "1104"
+        },
+        {
+            "@id": "#base_field_abstract",
+            "@type": "_BaseField",
+            "name": "Abstract",
+            "description": "The formal abstract of a document (as published, not a third-party summary)",
+            "_sourceIdentifier": "990"
+        },
+        {
+            "@id": "#base_field_transcription",
+            "@type": "_BaseField",
+            "name": "Transcription",
+            "description": "A transcription of the interview (original language)",
+            "_sourceIdentifier": "964"
+        },
+        {
+            "@id": "#base_field_bibliographic_citation",
+            "@type": "_BaseField",
+            "name": "Bibliographic citation",
+            "description": "A bibliographic reference for the resource.",
+            "_sourceIdentifier": "1110"
+        },
+        {
+            "@id": "#base_field_file",
+            "@type": "_BaseField",
+            "name": "File",
+            "description": "A related resource that is substantially the same as the pre-existing described resource, but in another digitisation format",
+            "_sourceIdentifier": "1112"
+        },
+        {
+            "@id": "#base_field_translated_title",
+            "@type": "_BaseField",
+            "name": "Translated Title",
+            "description": "English translation of original title",
+            "_sourceIdentifier": "1120"
+        },
+        {
+            "@id": "#base_field_place",
+            "@type": "_BaseField",
+            "name": "Place",
+            "description": "A pointer to a place or location record",
+            "_sourceIdentifier": "238"
+        },
+        {
+            "@id": "#base_field_image",
+            "@type": "_BaseField",
+            "name": "Image",
+            "description": "Link to OMAA image file entity",
+            "_sourceIdentifier": "1123"
+        },
+        {
+            "@id": "#base_field_description",
+            "@type": "_BaseField",
+            "name": "Description",
+            "description": "An account of the resource from the current holder.",
+            "_sourceIdentifier": "1106"
+        },
+        {
+            "@id": "#base_field_given_names",
+            "@type": "_BaseField",
+            "name": "Given names",
+            "description": "Given (or adopted) names of an individual",
+            "_sourceIdentifier": "18"
+        },
+        {
+            "@id": "#base_field_alternate_name",
+            "@type": "_BaseField",
+            "name": "Alternate name(s) / title(s)",
+            "description": "Alternative names or titles, use for simple alternatives where additional metadata is not needed",
+            "_sourceIdentifier": "132"
+        },
+        {
+            "@id": "#base_field_gender",
+            "@type": "_BaseField",
+            "name": "Gender",
+            "description": "Gender / Sex of a person or other living creature",
+            "_sourceIdentifier": "20",
+            "_valueFunction": {"@id": "#function_to_text"}
+        },
+        {
+            "@id": "#base_field_short_summary",
+            "@type": "_BaseField",
+            "name": "Short summary",
+            "description": "Short summary, typically used in annotated listings, information popups and so forth. Aim for 100 - 200 words.",
+            "_sourceIdentifier": "3"
+        },
+        {
+            "@id": "#base_field_primary_image",
+            "@type": "_BaseField",
+            "name": "Primary / preferred image",
+            "description": "The representative image used in record view, in search results and in other compact listings",
+            "_sourceIdentifier": "39"
+        },
+        {
+            "@id": "#base_field_honorific",
+            "@type": "_BaseField",
+            "name": "Honorific",
+            "description": "Title or honorific (Dr, Mrs, Ms, Professor, Sir etc.)",
+            "_sourceIdentifier": "19",
+            "_valueFunction": {"@id": "#function_to_text"}
+        },
+        {
+            "@id": "#base_field_start_date",
+            "@type": "_BaseField",
+            "name": "Start date",
+            "description": "Start Date (or birth/creation) - may also include time and/or have fuzzy limits",
+            "_sourceIdentifier": "10"
+        },
+        {
+            "@id": "#base_field_location",
+            "@type": "_BaseField",
+            "name": "Location (place)",
+            "description": "Reference (pointer) to the Place where the entity is located (for organisations generally head office/main location)",
+            "_sourceIdentifier": "134"
+        },
+        {
+            "@id": "#base_field_related_person",
+            "@type": "_BaseField",
+            "name": "Related Person(s)",
+            "description": "People related to the person by birth, marriage or other relationships",
+            "_sourceIdentifier": "235"
+        },
+        {
+            "@id": "#base_field_end_date",
+            "@type": "_BaseField",
+            "name": "End date",
+            "description": "End Date (or death/destruction) - may also include time and/or have fuzzy limits",
+            "_sourceIdentifier": "11"
+        },
+        {
+            "@id": "#base_field_place_of_death",
+            "@type": "_BaseField",
+            "name": "Place of death",
+            "description": "The place where the person died",
+            "_sourceIdentifier": "241"
+        },
+        {
+            "@id": "#base_field_contact_details",
+            "@type": "_BaseField",
+            "name": "Contact details or URL",
+            "description": "Contact details, either as text or a URL to eg. a phonebook record or search",
+            "_sourceIdentifier": "17"
+        },
+        {
+            "@id": "#base_field_email_address",
+            "@type": "_BaseField",
+            "name": "Email address",
+            "description": "Email address - repeat the field for multiple addresses or separate with commo or semi-colon according to local conventions",
+            "_sourceIdentifier": "23"
+        },
+        {
+            "@id": "#base_field_language_spoken",
+            "@type": "_BaseField",
+            "name": "Language spoken",
+            "description": "the language spoken by the person or group",
+            "_sourceIdentifier": "1049"
+        },
+        {
+            "@id": "#base_field_url",
+            "@type": "_BaseField",
+            "name": "URL",
+            "description": "The URL(s) of resources or web pages relating to the current record. ",
+            "_sourceIdentifier": "986"
+        },
+        {
+            "@id": "#base_field_mappable_location",
+            "@type": "_BaseField",
+            "name": "Mappable Location",
+            "description": "A geospatial object providing a mappable location for the record - can be used for any type of record with spatial location",
+            "_sourceIdentifier": "28"
+        },
+        {
+            "@id": "#base_field_file_uploaded",
+            "@type": "_BaseField",
+            "name": "File(s) - uploaded or remote",
+            "description": "An uploaded file or a reference to an external file through a URI",
+            "_sourceIdentifier": "38"
+        },
+        
+        
+
+
+        {
+            "@id": "#vocabulary_term_label",
+            "@type": "_VocabularyTermLabel",
+            "name": "Term Label",
+            "description": "The label of the vocabulary term"
+        },
+        {
+            "@id": "#vocabulary_term_description",
+            "@type": "_VocabularyTermDescription",
+            "name": "Term Description",
+            "description": "The description of the vocabulary term"
+        },
+        {
+            "@id": "#vocabulary_term_code",
+            "@type": "_VocabularyTermCode",
+            "name": "Term Code",
+            "description": "The code of the vocabulary term"
+        },
+        {
+            "@id": "#function_to_text",
+            "@type": "_Function",
+            "name": "to_text",
+            "description": "Convert to text"
+        },
+
+
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_RecordType",
+            "@type": "rdfs:Class",
+            "rdfs:label": "_RecordType",
+            "rdfs:comment": "The record type from Heurist"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_Vocabulary",
+            "@type": "rdfs:Class",
+            "rdfs:label": "_Vocabulary",
+            "rdfs:comment": "The vocabulary from Heurist"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_BaseField",
+            "@type": "rdfs:Class",
+            "rdfs:label": "_BaseField",
+            "rdfs:comment": "The base field from Heurist"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_Field",
+            "@type": "rdfs:Class",
+            "rdfs:label": "_Field",
+            "rdfs:comment": "The field from Heurist"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_VocabularyTermLabel",
+            "@type": "rdfs:Class",
+            "rdfs:label": "_VocabularyTermLabel",
+            "rdfs:comment": "The label of the vocabulary term"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_VocabularyTermDescription",
+            "@type": "rdfs:Class",
+            "rdfs:label": "_VocabularyTermDescription",
+            "rdfs:comment": "The description of the vocabulary term"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_VocabularyTermCode",
+            "@type": "rdfs:Class",
+            "rdfs:label": "_VocabularyTermCode",
+            "rdfs:comment": "The code of the vocabulary term"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_Function",
+            "@type": "rdfs:Class",
+            "rdfs:label": "_Function",
+            "rdfs:comment": "A function to excute when writting values"
+        },
+
+
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_name",
+            "@type": "rdf:Property",
+            "rdfs:label": "_name",
+            "rdfs:comment": "A property used to map to the standart schema.org name property."
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_sourceType",
+            "@type": "rdf:Property",
+            "rdfs:label": "_sourceType",
+            "rdfs:comment": "An entity type from the data source"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_valueFunction",
+            "@type": "rdf:Property",
+            "rdfs:label": "_valueFunction",
+            "rdfs:comment": "Functions to apply on the value"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/heurist-mapping#_sourceIdentifier",
+            "@type": "rdf:Property",
+            "rdfs:label": "_sourceIdentifier",
+            "rdfs:comment": "An ID from the data source"
+        },
+
+
+        {
+            "@id": "https://w3id.org/ro/terms/omaa#translatedTitle",
+            "@type": "rdf:Property",
+            "rdfs:label": "translatedTitle",
+            "rdfs:comment": "English translation of original title",
+            "domainIncludes": {"@id": "https://schema.org/Newspaper"}
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/omaa#file",
+            "@type": "rdf:Property",
+            "rdfs:label": "file",
+            "rdfs:comment": "A related resource that is substantially the same as the pre-existing described resource, but in another digitisation format."
+        }
+
+
+    ]
+}
